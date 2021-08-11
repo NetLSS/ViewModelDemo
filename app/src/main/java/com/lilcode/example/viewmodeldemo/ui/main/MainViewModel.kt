@@ -11,4 +11,8 @@ class MainViewModel : ViewModel() {
         this.dollarText = value
         result = value.toFloat() * usd_to_eu_rate
     }
+
+    fun getResult(): Float? {
+        return result
+    }
 }
