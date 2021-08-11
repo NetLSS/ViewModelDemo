@@ -3,5 +3,12 @@ package com.lilcode.example.viewmodeldemo.ui.main
 import androidx.lifecycle.ViewModel
 
 class MainViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+    private val usd_to_eu_rate = 0.74f
+    private var dollarText = ""
+    private var result: Float = 0f
+
+    fun setAmount(value: String) {
+        this.dollarText = value
+        result = value.toFloat() * usd_to_eu_rate
+    }
 }
